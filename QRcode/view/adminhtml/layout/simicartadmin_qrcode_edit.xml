@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <body>
+        <referenceBlock name="menu">
+            <action method="setActive">
+                <argument name="itemId" xsi:type="string">Simicart_QRcode:QRcode</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Simicart\QRcode\Block\Adminhtml\QRcode\Edit" name="whatevername"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Simicart\QRcode\Block\Adminhtml\QRcode\Edit\Tabs" name="multivendoradmin_vendor_edit_tabs">
+            </block>
+        </referenceContainer> 
+         <!-- <referenceContainer name="content">
+            <block class="Simicart\QRcode\Block\Adminhtml\QRcode\Edit\Tab\Form" name="Form"/>
+        </referenceContainer> -->
+    </body>
+</page>

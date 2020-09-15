@@ -1,0 +1,32 @@
+<h1>All QRCodes</h1>
+
+<?php 
+  
+$AllQRcodes = $block->getAllQRcode();
+
+
+ ?>
+
+<?php if (count($AllQRcodes) > 0): ?>
+ <table border="1">
+      <tr>
+         <th><?= __("ID") ?></th>
+          <th><?= __("QRcode") ?></th>
+           <th> <?= __("Product Name") ?></th>
+           <th> <?= __("Product SKU") ?></th>
+           <th> <?= __("Created At") ?></th>
+        </tr>
+       <?php foreach ($AllQRcodes as $QRcode): ?>
+            <tr>
+              <td><?= $QRcode->getData('qrcode_id') ?></td>
+              <td><?= $QRcode->getData('qrcode') ?></td>
+              <td><?= $QRcode->getData('product_name') ?></td>
+              <td><?= $QRcode->getData('product_sku') ?></td>
+              <td><?= $QRcode->getData('created_at') ?></td>
+               
+           </tr>
+      <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <h1><?= __("You have no cars 2wwwyet :(") ?></h1>
+<?php endif; ?>

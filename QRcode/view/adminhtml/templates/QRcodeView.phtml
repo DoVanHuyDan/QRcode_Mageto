@@ -1,0 +1,12 @@
+<?php $qrcodeURL = $block->getQRcode(); ?>
+
+<div class="card" style="width: 500px;
+margin: auto;">
+<img  src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?php echo $qrcodeURL->getData('qrcode');  ?>" alt="assa" style="    display: block;
+    margin: auto;" >
+<div class="container" style="width: fit-content;
+    margin: auto;">
+	<h4><b>Product Name : </b><?php echo $qrcodeURL->getData('product_name');?></h4>
+	
+</div>
+</div>

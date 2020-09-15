@@ -1,0 +1,6 @@
+<listing sorting="true" class="Magento\Ui\Component\Listing" component="uiComponent">
+    <argument name="data" xsi:type="array">
+        <item name="template" xsi:type="string">QRcodeView</item>
+       
+    </argument>
+</listing>
